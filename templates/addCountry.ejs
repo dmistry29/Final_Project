@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <header>
+        <h1>Plan Your Trip 🌍✈️</h1>
+        <p>Design your dream travel experience in just a few clicks.</p>
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+            rel="stylesheet">
+    </header>
+
+    <form action="/addCountry" method="POST">
+
+        <fieldset>
+            <legend>Basic Trip Info</legend>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="start-date">Travel Start Date:</label>
+            <input type="date" id="start-date" name="startDate" required>
+
+            <label for="end-date">Travel End Date:</label>
+            <input type="date" id="end-date" name="endDate" required>
+
+            <label for="budget">Budget ($):</label>
+            <input type="number" id="budget" name="budget" min="0" required>
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Preferences</legend>
+
+            <label for="accommodation">Accommodation Type:</label>
+            <select id="accommodation" name="accommodation">
+                <option>Hotel</option>
+                <option>Hostel</option>
+                <option>Airbnb</option>
+                <option>Camping</option>
+            </select>
+
+            <label for="trip-type">Trip Type:</label>
+            <select id="trip-type" name="tripType">
+                <option>Adventure</option>
+                <option>Relaxation</option>
+                <option>Cultural</option>
+                <option>Nature</option>
+                <option>Business</option>
+            </select>
+
+            <label>Activities Interested In:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="activities" value="Hiking"> Hiking</label>
+                <label><input type="checkbox" name="activities" value="Museums"> Museums</label>
+                <label><input type="checkbox" name="activities" value="Beaches"> Beaches</label>
+                <label><input type="checkbox" name="activities" value="Nightlife"> Nightlife</label>
+                <label><input type="checkbox" name="activities" value="Food"> Food</label>
+                <label><input type="checkbox" name="activities" value="Shopping"> Shopping</label>
+                <label><input type="checkbox" name="activities" value="History"> History</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Logistics</legend>
+
+            <label for="travelers">Number of Travelers:</label>
+            <input type="number" id="travelers" name="travelers" min="1" required>
+
+            <label for="age-group">Age Group:</label>
+            <select id="age-group" name="ageGroup">
+                <option>Child</option>
+                <option>Teen</option>
+                <option>Adult</option>
+                <option>Senior</option>
+            </select>
+
+            <label for="departure">Departure City/Airport:</label>
+            <input type="text" id="departure" name="departure">
+
+            <label for="currency">Preferred Currency:</label>
+            <select id="currency" name="currency">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>JPY</option>
+                <option>AUD</option>
+                <option>INR</option>
+            </select>
+
+            <label for="visa">Visa Status:</label>
+            <select id="visa" name="visaStatus">
+                <option>Already have visa</option>
+                <option>Need visa</option>
+                <option>Not required</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Notes</legend>
+            <label for="notes">Special Requests or Notes:</label>
+            <textarea id="notes" name="notes" rows="4"
+                placeholder="Any dietary restrictions, accessibility needs, etc."></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Trip Plan</button>
+    </form>
+    <a href="/" class="btn" style="margin-top: 30px;">Back to Home</a>
+</body>
+
+</html>

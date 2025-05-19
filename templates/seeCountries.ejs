@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My Saved Countries</title>
+    <link rel="stylesheet" href="/styles2.css" />
+</head>
+
+<body>
+    <h1>My Countries Travel List</h1>
+    <div class="country-container">
+        <% countries.forEach(country=> { %>
+            <div class="country-card">
+                <h1>
+                    <%= country.userInputName %>
+                </h1>
+
+                <section>
+                    <h2>Country Info</h2>
+                    <p><strong>Capital:</strong>
+                        <%= country.capital %>
+                    </p>
+                    <p><strong>Region:</strong>
+                        <%= country.region %>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Your Travel Details</h2>
+                    <p><strong>Travel Start:</strong>
+                        <%= country.travelStart %>
+                    </p>
+                    <p><strong>Travel End:</strong>
+                        <%= country.travelEnd %>
+                    </p>
+                    <p><strong>Budget:</strong>
+                        <%= country.budget %>
+                    </p>
+                    <p><strong>Accomodation:</strong>
+                        <%= country.accomodation %>
+                    </p>
+                    <p><strong>Trip Type:</strong>
+                        <%= country.tripType %>
+                    </p>
+                    <p><strong>Activities:</strong>
+                        <%= country.activities %>
+                    </p>
+                    <p><strong>Number of Travellers:</strong>
+                        <%= country.numberOfTravellers %>
+                    </p>
+                    <p><strong>Age Group:</strong>
+                        <%= country.ageGroup %>
+                    </p>
+                    <p><strong>Departure City:</strong>
+                        <%= country.departureCity %>
+                    </p>
+                    <p><strong>Preferred Currency:</strong>
+                        <%= country.preferredCurrency %>
+                    </p>
+                    <p><strong>Visa Status:</strong>
+                        <%= country.visaStatus %>
+                    </p>
+                    <p><strong>Description:</strong>
+                        <%= country.description %>
+                    </p>
+                </section>
+            </div>
+            <% }) %>
+    </div>
+
+    <a href="/" class="btn" style="margin-top: 30px;">Back to Home</a>
+</body>
+
+</html>
